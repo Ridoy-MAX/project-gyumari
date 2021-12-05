@@ -1,0 +1,509 @@
+/*==========
+variable css start
+==============*/
+:root {
+  --ff1: 'Rubik', sans-serif;
+  --ff2: 'Raleway', sans-serif;
+}
+
+.common-btn1 {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 15px;
+  background-color: #05060F;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 26px;
+  left: 24px;
+  top: 8px;
+}
+
+/*==========
+variable css end
+==============*/
+/*==========================
+responsive NAV bar 
+==================
+========================*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bd-grid {
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 1rem;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+}
+.header .header__toggle {
+  font-size: 30px;
+  cursor: pointer;
+  padding-right: 20px;
+  position: absolute;
+  right: 0;
+}
+
+/*responsive*/
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #6C63FF;
+    width: 80%;
+    height: 100vh;
+    padding: 2rem 0;
+    z-index: var(--z-fixed);
+    transition: .5s;
+    overflow-y: auto;
+    color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+  }
+  .header__logo, .header__toggle {
+    display: none;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .header__toggle {
+    padding-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .header .nav .menu {
+    flex-direction: column;
+  }
+  .header .nav .menu .logo {
+    display: none;
+  }
+  .header .nav .menu .login-contact {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header .nav .menu .login-contact a {
+    color: white;
+    background-color: #8682e6 !important;
+    text-align: center;
+    margin-right: 30px;
+    border-radius: 30px;
+    height: 30px;
+    line-height: 30px !important;
+  }
+  .header .nav .menu .login-contact .num {
+    background-color: #8682e6 !important;
+    text-align: center;
+    margin-right: 30px;
+  }
+  .header .nav .menu .nav-item .list {
+    flex-direction: column;
+    text-align: center;
+    color: white;
+  }
+  .header .nav .menu .nav-item .list li a {
+    color: white;
+  }
+}
+@media screen and (min-width: 576px) {
+  .nav {
+    width: 288px;
+  }
+}
+.show {
+  left: 0;
+}
+
+/*==========================
+=============================
+==============================
+=============================
+responsive NAV bar end
+===============================
+=============================
+
+========================*/
+/*==========
+header-top css start
+==============*/
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  background: #F1CB78;
+}
+.header-top .container p {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #1C222A;
+  margin-bottom: 0;
+}
+.header-top .container p a {
+  color: #1C222A;
+}
+.header-top .container p span {
+  margin-left: 5px;
+}
+
+/*==========
+header-top css end
+==============*/
+/*==========
+header-top css start
+==============*/
+.header {
+  position: static;
+  height: 76px;
+  left: 0px;
+  top: 58px;
+}
+.header .nav .menu .nav-item .list li {
+  display: flex;
+  align-items: center;
+}
+.header .nav .menu .nav-item .list li a {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  height: 26px;
+  margin-left: 25px;
+  top: 10px;
+  color: #1C222A;
+}
+.header .nav .menu .nav-item .list li .active {
+  color: #F0A347 !important;
+  font-weight: bold;
+}
+.header .nav .menu .nav-item .list li .course-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 15px;
+  border: 2px solid #05060F;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 26px;
+  left: 24px;
+  top: 8px;
+}
+
+/*==========
+header-top css start
+==============*/
+/*==========
+banner css start
+==============*/
+.banner {
+  background: #FBFBFB;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+.banner .container .row .deatils h1 {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 71px;
+  /* Text Color/ Dark */
+  color: #1C222A;
+}
+.banner .container .row .deatils p {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  float: left;
+  /* or 133% */
+  /* Text Color/ Dark */
+  color: #1C222A;
+}
+.banner .container .row .deatils a {
+  margin-top: 14px;
+}
+.banner .container .row .imgs {
+  border-radius: 8px !important;
+}
+.banner .container .row .imgs .round1 {
+  border-top-left-radius: 15px;
+}
+.banner .container .row .imgs .round2 {
+  border-top-right-radius: 15px;
+}
+.banner .container .row .imgs .round3 {
+  border-bottom-left-radius: 15px;
+}
+.banner .container .row .imgs .round4 {
+  border-bottom-right-radius: 15px;
+}
+.banner .container .patner {
+  margin-top: 50px;
+}
+.banner .container .courses-details {
+  margin-top: 120px;
+}
+.banner .container .courses-details .heading {
+  margin-bottom: 80px;
+}
+.banner .container .courses-details .heading h1 {
+  font-family: var(--ff1);
+  font-style: Bolder;
+  font-size: 52px;
+  line-height: 62px;
+  color: #1C222A;
+}
+.banner .container .courses-details .heading p {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  padding-right: 52px;
+  /* or 133% */
+  /* Text Color/ Light */
+  color: #A2A8B0;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details {
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 54px 32px;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .span {
+  width: 45px;
+  height: 3px;
+  background-color: #F0A347;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .logo i {
+  color: #A4C639;
+  font-size: 42px;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .logo span {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  /* Text Color/ Dark */
+  color: #1C222A;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .head h3 {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+  /* Text Color/ Dark */
+  color: #1C222A;
+  padding-bottom: 20px;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .time h4 {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  /* Text Color/ Light */
+  color: #A2A8B0;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .text p {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+  /* Text Color/ Dark */
+  color: #1C222A;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .course-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  border: 2px solid #05060F;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 26px;
+  left: 24px;
+  top: 8px;
+  color: #000;
+  width: 130px;
+  transition: 0.4s;
+}
+.banner .container .courses-details .courses .row .col-lg-6 .card-details .course-btn:hover {
+  background-color: #05060F;
+  color: white;
+}
+.banner .container .courses-details .statistice .col h3 {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  padding-left: 10px;
+  /* identical to box height, or 133% */
+  /* Text Color/ Dark */
+  color: #1C222A;
+  border-left: 3px solid #F0A347;
+}
+.banner .container .courses-details .statistice .col h4 {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height, or 162% */
+  /* Text Color/ Dark */
+  color: #1C222A;
+}
+.banner .container .courses-details .statistice .col p {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  /* or 162% */
+  /* Text Color/ Light */
+  color: #A2A8B0;
+}
+.banner .container .special-project .heading {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.banner .container .special-project .heading h1 {
+  font-family: var(--ff1);
+  font-style: Bolder;
+  font-size: 52px;
+  line-height: 62px;
+  color: #1C222A;
+  float: right;
+}
+.banner .container .special-project .heading p {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+  float: right;
+  /* or 133% */
+  /* Text Color/ Light */
+  color: #A2A8B0;
+}
+.banner .container .special-project .project {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+}
+.banner .container .special-project .project .img img {
+  margin-bottom: 10px;
+  margin-right: 12px;
+}
+.banner .container .special-project .project .detail1 h3 {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #1C222A;
+  margin-top: 10px;
+}
+.banner .container .special-project .project .detail1 p {
+  font-family: var(--ff1);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  /* or 133% */
+  display: flex;
+  align-items: center;
+  /* Text Color/ Dark */
+  color: #A2A8B0;
+}
+.banner .container .special-project .project .detail1 .course-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 15px;
+  border: 2px solid #05060F;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 26px;
+  left: 24px;
+  top: 8px;
+  width: 130px;
+  color: #000;
+  transition: 0.4s;
+}
+.banner .container .special-project .project .detail1 .course-btn:hover {
+  background-color: #05060F;
+  color: white;
+}
+
+/*==========
+banner css end
+==============*/
+/*==================
+Responsive css start
+===================*/
+/*========= Break pont one======*/
+/*========= Break pont two======*/
+/*========= Break pont three======*/
+/*========= Break pont four======*/
+/*========= Break pont five======*/
+/*========= Break pont Six======*/
+/*==================
+Responsive css END
+===================*/
+
+/*# sourceMappingURL=styles.css.map */
